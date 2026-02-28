@@ -12,13 +12,20 @@
         <h1>BUSQUE SEU AMIGO DE ESTIMAÇÃO</h1>
     </div>
 
+    <form id="pet-form">
+    <input type="hidden" id="pet-id" />
+    <input type="text" id="pet-nome" placeholder="Nome do Pet">
+    <input type="text" id="pet-especie" placeholder="Espécie do Pet">
+    <input type="text" id="pet-raca" placeholder="Raça do Pet">
+    <button type="submit">Salvar</button>
+    <button type="button" id="botao-cancelar">Cancelar</button>
+  </form>   
+
     <section id="lista-de-pets-container">
         
         <ul id="lista-pets"></ul>
       </section>
     
-    <script type="module" src="js/api.js"></script>
-    <script type="module" src="js/ui.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
