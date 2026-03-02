@@ -7,24 +7,6 @@
       "raca": "Siamês"
     },
     {
-      "id": "2b3c",
-      "especie": "canina",
-      "nome": "Rex",
-      "raca": "Labrador"
-    },
-    {
-      "id": "3c4d",
-      "especie": "felina",
-      "nome": "Luna",
-      "raca": "Persa"
-    },
-    {
-      "id": "4d5e",
-      "especie": "canina",
-      "nome": "Max",
-      "raca": "Beagle"
-    },
-    {
       "id": "5e6f",
       "especie": "felina",
       "nome": "Simba",
@@ -35,12 +17,6 @@
       "especie": "canina",
       "nome": "Bella",
       "raca": "Bulldog"
-    },
-    {
-      "id": "7g8h",
-      "especie": "felina",
-      "nome": "Oscar",
-      "raca": "Bengal"
     },
     {
       "id": "8h9i",
@@ -83,12 +59,6 @@
       "nome": "teste",
       "especie": "teste",
       "raca": "teste"
-    },
-    {
-      "id": "8ae9",
-      "nome": "sss",
-      "especie": "sss",
-      "raca": "ss"
     }
   ]
 }

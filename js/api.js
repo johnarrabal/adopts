@@ -49,7 +49,21 @@ const api = {
       alert('Erro ao editar pet')
       throw error
     }
+  },
+
+  async excluirPet(id){
+    try{
+      const response = await fetch(`http://localhost:3000/pets/${id}`, {
+        method: "DELETE"
+        })
+        return await response.json()
+    }
+    catch{
+      alert('Erro ao deletar pet')
+      throw error
+    }
   }
+
 };
 
 export default api;

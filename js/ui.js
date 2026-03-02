@@ -17,11 +17,24 @@ const ui = {
 
   async renderizarPets() {
     const listaPets = document.getElementById("lista-pets");
-    
+    const mensagemVazia = document.getElementById("mensagem-vazia");
+    listaPets.innerHTML = "";
+
 
     try {
-      const pets = await api.buscarPet();
+
+      
+        const pets = await api.buscarPet();
         pets.forEach(ui.adicionarPetNaLista);
+        if(pets.length === 0){
+          mensagemVazia.style.display = "block";
+      } else {
+        mensagemVazia.style.display = "none";
+        pensamentos.forEach(ui.adicionarPetNaLista)
+      }
+
+
+      
     } catch {
       
       alert("Erro ao obter pets. Tente novamente mais tarde.");
@@ -57,9 +70,29 @@ const ui = {
     iconeEditar.alt = "Editar"
     botaoEditar.appendChild(iconeEditar)
 
+    const botaoExcluir = document.createElement("button")
+    botaoExcluir.classList.add("botao-excluir")
+    botaoExcluir.onclick = async () => {
+      try {
+        await api.excluirPet(pet.id)
+        ui.renderizarPets()
+      }
+      catch (error){
+        alert('Erro ao excluir pet')
+      }
+    }
+    const iconeExcluir = document.createElement("img")
+    iconeExcluir.src = "assets/imagens/icone-excluir.png"
+    iconeExcluir.alt = "Excluir"
+    botaoExcluir.appendChild(iconeExcluir)
+
+
     const icones = document.createElement("div")
     icones.classList.add("icones")
     icones.appendChild(botaoEditar)
+
+    icones.appendChild(botaoExcluir)
+
 
 
     li.appendChild(nomePet);

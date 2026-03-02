@@ -36,4 +36,3 @@ function manipularCancelamento() {
   ui.limparFormulario();
 }
 
-
